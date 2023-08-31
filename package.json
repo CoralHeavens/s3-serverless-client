@@ -1,5 +1,6 @@
 {
   "name": "s3-manager",
+  "homepage": "s3-serverless-client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
