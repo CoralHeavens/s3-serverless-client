@@ -1,0 +1,34 @@
+* {
+    font-size: 18px;
+}
+
+body {
+    background: gainsboro;
+}
+
+.container {
+    padding: 80px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.file-container {
+    display: flex;
+}
+
+button {
+    min-height: 48px;
+    min-width: 120px;
+    background: wheat;
+    border-color: coral;
+    border-radius: 16px;
+}
+
+.hidden {
+    display: none;
+}
