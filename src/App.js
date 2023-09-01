@@ -33,8 +33,7 @@ function App() {
 
     reader.readAsDataURL(file)
     reader.onload = () => {
-      console.log(reader.result.split(':')[1]);
-      S3.postImage(reader.result.split(':')[1])
+      S3.postImage(reader.result, file.name)
         .then((data) => console.log(data));    
     }
   };
