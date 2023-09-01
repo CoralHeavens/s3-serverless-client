@@ -12,6 +12,7 @@ const labels = {
 
 function App() {
   const [file, setFile] = useState();
+  const [uploadedFileUrl, updateFileUrl] = useState();
 
   const handleFileChange = (e) => {
     if (e.target.files) {
@@ -34,7 +35,7 @@ function App() {
     reader.readAsDataURL(file)
     reader.onload = () => {
       S3.postImage(reader.result, file.name)
-        .then((data) => console.log(data));    
+        .then((data) => updateFileUrl(data));    
     }
   };
 
@@ -47,8 +48,11 @@ function App() {
       </div>
 
       <button onClick={handleUploadClick}>{labels.buttons.upload}</button>
-
       <button onClick={handleGetClick}>{labels.buttons.testGet}</button>
+      
+      <a href={uploadedFileUrl}>
+          {uploadedFileUrl}
+      </a>
     </div>
   );
 }
