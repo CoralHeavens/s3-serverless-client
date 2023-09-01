@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/s3-serverless-client/static/css/main.a1d4417a.css",
-    "main.js": "/s3-serverless-client/static/js/main.2c38c2cd.js",
+    "main.js": "/s3-serverless-client/static/js/main.ca311209.js",
     "index.html": "/s3-serverless-client/index.html",
     "main.a1d4417a.css.map": "/s3-serverless-client/static/css/main.a1d4417a.css.map",
-    "main.2c38c2cd.js.map": "/s3-serverless-client/static/js/main.2c38c2cd.js.map"
+    "main.ca311209.js.map": "/s3-serverless-client/static/js/main.ca311209.js.map"
   },
   "entrypoints": [
     "static/css/main.a1d4417a.css",
-    "static/js/main.2c38c2cd.js"
+    "static/js/main.ca311209.js"
   ]
 }
