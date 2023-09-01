@@ -11,16 +11,18 @@ export default class S3Service {
 
     getImage = (id) => 
         this.#doRequest(
-            fetch(`${API_KEYS.getImage}/${id}`, {method: 'GET'})
+            fetch(`${API_KEYS.getImage}/${id}`, {
+                method: 'GET'
+            })
         )
 
     postImage = (file) => 
         this.#doRequest(
             fetch(API_KEYS.postImage, {
                 method: 'POST',
-                body: JSON.stringify({
-                    data: file
-                }),
+                // body: JSON.stringify({
+                //     data: file
+                // })
                 mode: 'no-cors'
             })
         )

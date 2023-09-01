@@ -3,6 +3,13 @@ import S3Service from './services/S3Service';
 
 const S3 = new S3Service();
 
+const labels = {
+  buttons: {
+    upload: 'Upload',
+    testGet: 'Make test GET request'
+  }
+}
+
 function App() {
   const [file, setFile] = useState();
 
@@ -11,6 +18,11 @@ function App() {
       setFile(e.target.files[0]);
     }
   };
+
+  const handleGetClick = () => {
+    S3.getImage('123')
+      .then(res => console.log(res));
+  }
 
   const handleUploadClick = () => {
     if (!file) {
@@ -35,7 +47,9 @@ function App() {
         </label>
       </div>
 
-      <button onClick={handleUploadClick}>Upload</button>
+      <button onClick={handleUploadClick}>{labels.buttons.upload}</button>
+
+      <button onClick={handleGetClick}>{labels.buttons.testGet}</button>
     </div>
   );
 }
